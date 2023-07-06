@@ -18,6 +18,8 @@ import {
 import { Link } from 'react-router-dom';
 import Nav from '../components/Nav';
 import movies from '../movies.json';
+import './Home.css';
+
 
 const Home: React.FC = () => {
   const displayedMovies = movies.slice(0, 5);
@@ -39,9 +41,9 @@ const Home: React.FC = () => {
             }}
           >
             {displayedMovies.map((movie) => (
-              <IonCol key={movie.id} size="12" size-sm="4" size-sm="3" style={{ marginBottom: '20px' }}>
+              <IonCol key={movie.id} size="12" size-sm="4" size-md="3" style={{ marginBottom: '20px' }}>
                 <IonCard>
-                  <Link to={`/movie/${movie.id}`}>
+                  <Link to={`/movie/${movie.id}`} className="link-no-underline">
                     <div
                       style={{
                         backgroundImage: `url(https://image.tmdb.org/t/p/w500/${movie.poster_path})`,
@@ -51,17 +53,11 @@ const Home: React.FC = () => {
                         height: '300px',
                       }}
                     ></div>
-                    <IonCardHeader>
-                      <IonCardSubtitle style={{ fontSize: '14px', fontWeight: 'bold' }}>
-                        {movie.genre}
-                      </IonCardSubtitle>
-                      <IonCardTitle style={{ fontSize: '18px', margin: '10px 0' }}>
+                    <IonCardHeader className="titcen">
+                      <IonCardTitle style={{ fontSize: '18px' }}>
                         {movie.title}
                       </IonCardTitle>
                     </IonCardHeader>
-                    <IonCardContent style={{ textAlign: 'center' }}>
-                      {/* Contenido adicional si es necesario */}
-                    </IonCardContent>
                   </Link>
                 </IonCard>
               </IonCol>
