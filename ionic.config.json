@@ -1,0 +1,7 @@
+{
+  "name": "pd2",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
