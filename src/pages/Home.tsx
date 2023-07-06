@@ -39,7 +39,7 @@ const Home: React.FC = () => {
             }}
           >
             {displayedMovies.map((movie) => (
-              <IonCol key={movie.id} size="12" size-sm="4" size-md="3" style={{ marginBottom: '20px' }}>
+              <IonCol key={movie.id} size="12" size-sm="4" size-sm="3" style={{ marginBottom: '20px' }}>
                 <IonCard>
                   <Link to={`/movie/${movie.id}`}>
                     <div
